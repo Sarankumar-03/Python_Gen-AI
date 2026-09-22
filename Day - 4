@@ -1,0 +1,32 @@
+name = 'saran'
+city = 'chennai'
+age = '23'
+#String Concatenation:
+name + ' ' + city
+'saran chennai'
+first_name = 'Saran'
+last_name = 'Kumar'
+full_name = first_name + last_name
+print(full_name)
+SaranKumar
+name + str(age)
+'saran23'
+first_name and last_name + str(age)
+'Kumar23'
+'first_name and last_name' + str(age)
+'first_name and last_name23'
+full_name + str(age)
+'SaranKumar23'
+#String Repetition:
+name*5
+'saransaransaransaransaran'
+full_name*5 + ''
+'SaranKumarSaranKumarSaranKumarSaranKumarSaranKumar'
+'' + full_name*5
+'SaranKumarSaranKumarSaranKumarSaranKumarSaranKumar'
+full_name = 'sarankumar  '
+'' + full_name*5
+'sarankumar  sarankumar  sarankumar  sarankumar  sarankumar  '
+name = ' saran '
+name*5
+' saran  saran  saran  saran  saran '
