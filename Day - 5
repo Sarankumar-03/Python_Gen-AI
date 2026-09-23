@@ -1,0 +1,23 @@
+name = 'saran'
+city = 'chennai'
+age = '23'
+#String Formatting:
+name.format()
+'saran'
+print('my name is {0} and my age is {1}')
+my name is {0} and my age is {1}
+#Manual Formatting:
+print('my name is {0} and my age is {1}'.format(name,age))
+my name is saran and my age is 23
+print('my name is {1} and my age is {0}'.format(name,age))
+my name is 23 and my age is saran
+#Automated Formatting:
+print('my name is {%s} and my age is {%s}'%(name,age))
+my name is {saran} and my age is {23}
+print('my name is %s and my age is %s'%(name,age))
+my name is saran and my age is 23
+#General Formatting:
+print('my name is', name, 'my age is', age)
+my name is saran my age is 23
+'my name is', name, 'my age is', age
+('my name is', 'saran', 'my age is', '23')
