@@ -1,0 +1,47 @@
+#List
+item = ['car', 'Bus', 'Cycle', 'Train', 'Bike']
+item100 = ['abc', 'sk', 'HR', 'TV', 'Van']
+#Ordered Collection of items:
+print(item)
+['car', 'Bus', 'Cycle', 'Train', 'Bike']
+print(item100)
+['abc', 'sk', 'HR', 'TV', 'Van']
+#Indexed:
+print(item[0])
+car
+print(item[4])
+Bike
+print(item100[1])
+sk
+print(item100[3])
+TV
+#Duplicate Values:
+item
+['car', 'Bus', 'Cycle', 'Train', 'Bike']
+item.append('Bike')
+print(item)
+['car', 'Bus', 'Cycle', 'Train', 'Bike', 'Bike']
+item100
+['abc', 'sk', 'HR', 'TV', 'Van']
+item100.append('TV')
+print(item100)
+['abc', 'sk', 'HR', 'TV', 'Van', 'TV']
+#Heterogeneous Values:
+item100
+['abc', 'sk', 'HR', 'TV', 'Van', 'TV']
+item100.append('101')
+item100.append('10.5')
+item100.append('True')
+print(item100)
+['abc', 'sk', 'HR', 'TV', 'Van', 'TV', '101', '10.5', 'True']
+#Popping of Values:
+item.pop(1)
+'Bus'
+item100.pop(2)
+'HR'
+#Mutable:
+item
+['car', 'Cycle', 'Train', 'Bike', 'Bike']
+item[1] = 'Notebook'
+print(item)
+['car', 'Notebook', 'Train', 'Bike', 'Bike']
