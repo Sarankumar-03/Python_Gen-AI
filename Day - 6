@@ -102,3 +102,4 @@ item100
 item100.reverse()
 print(item100)
 ['False', '10.5', '101', 'TV', 'Van', 'sk', 'abc']
+.
