@@ -45,3 +45,60 @@ item
 item[1] = 'Notebook'
 print(item)
 ['car', 'Notebook', 'Train', 'Bike', 'Bike']
+#Mutable: (Add, Insert, Removing, Deleting, Replacing, Changing Position):
+#Add
+item
+['car', 'Notebook', 'Train', 'Bike', 'Bike']
+item.append('cup')
+item
+['car', 'Notebook', 'Train', 'Bike', 'Bike', 'cup']
+item100
+['abc', 'sk', 'TV', 'Van', 'TV', '101', '10.5', 'True']
+item100.append('TVS')
+print(item100)
+['abc', 'sk', 'TV', 'Van', 'TV', '101', '10.5', 'True', 'TVS']
+#Inserting
+item.insert(2, 'sharpner')
+print(item)
+['car', 'Notebook', 'sharpner', 'Train', 'Bike', 'Bike', 'cup']
+item.insert(5, 'Fan')
+print(item)
+['car', 'Notebook', 'sharpner', 'Train', 'Bike', 'Fan', 'Bike', 'cup']
+#Removing
+item100
+['abc', 'sk', 'TV', 'Van', 'TV', '101', '10.5', 'True', 'TVS']
+item100.remove('TV')
+print(item100)
+['abc', 'sk', 'Van', 'TV', '101', '10.5', 'True', 'TVS']
+#Deleting
+item100
+['abc', 'sk', 'Van', 'TV', '101', '10.5', 'True', 'TVS']
+del item100[7]
+print(item100)
+['abc', 'sk', 'Van', 'TV', '101', '10.5', 'True']
+del item[5]
+print(item)
+['car', 'Notebook', 'sharpner', 'Train', 'Bike', 'Bike', 'cup']
+#Replacing
+item
+['car', 'Notebook', 'sharpner', 'Train', 'Bike', 'Bike', 'cup']
+item[6] = '101Book'
+print(item)
+['car', 'Notebook', 'sharpner', 'Train', 'Bike', 'Bike', '101Book']
+item100
+['abc', 'sk', 'Van', 'TV', '101', '10.5', 'True']
+item100[6] = 'False'
+print(item100)
+['abc', 'sk', 'Van', 'TV', '101', '10.5', 'False']
+#Changing Position
+item.reverse()
+print(item)
+['101Book', 'Bike', 'Bike', 'Train', 'sharpner', 'Notebook', 'car']
+item.reverse()
+print(item)
+['car', 'Notebook', 'sharpner', 'Train', 'Bike', 'Bike', '101Book']
+item100
+['abc', 'sk', 'Van', 'TV', '101', '10.5', 'False']
+item100.reverse()
+print(item100)
+['False', '10.5', '101', 'TV', 'Van', 'sk', 'abc']
