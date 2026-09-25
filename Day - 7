@@ -1,0 +1,41 @@
+#tuple
+t = ('Headphone', 'Glass', 'Table', 'Chair', 'Belt')
+z = ('fast', 'Up', 'Swim', 'work', 'Basketball')
+t
+('Headphone', 'Glass', 'Table', 'Chair', 'Belt')
+z
+('fast', 'Up', 'Swim', 'work', 'Basketball')
+list('Football')
+['F', 'o', 'o', 't', 'b', 'a', 'l', 'l']
+A = list(t)
+A.append('Jump')
+A
+['Headphone', 'Glass', 'Table', 'Chair', 'Belt', 'Jump']
+t
+('Headphone', 'Glass', 'Table', 'Chair', 'Belt')
+t = tuple(A)
+print(t)
+('Headphone', 'Glass', 'Table', 'Chair', 'Belt', 'Jump')
+#Set
+z
+('fast', 'Up', 'Swim', 'work', 'Basketball')
+z = {'fast', 'Up', 'Swim', 'work', 'Basketball'}
+z
+{'Basketball', 'Swim', 'Up', 'fast', 'work'}
+s = {'fit', 'Gun', 'GK', 'GK', 'Boss'}
+s
+{'Gun', 'fit', 'Boss', 'GK'}
+s.add('GK')
+s
+{'Gun', 'fit', 'Boss', 'GK'}
+s.add('up')
+s
+{'Gun', 'GK', 'Boss', 'up', 'fit'}
+z.add('fit')
+z
+{'Basketball', 'Swim', 'Up', 'fit', 'fast', 'work'}
+s.difference(z)
+{'Gun', 'Boss', 'up', 'GK'}
+z.difference_update(s)
+z
+{'Basketball', 'Swim', 'Up', 'fast', 'work'}
