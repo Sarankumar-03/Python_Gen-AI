@@ -1,0 +1,94 @@
+#For-loop:
+name = 'saran'
+for letter in name:
+    print(letter)
+
+    
+s
+a
+r
+a
+n
+for R in range(len(name)):
+    print(R, name[R])
+
+    
+0 s
+1 a
+2 r
+3 a
+4 n
+for number in range(1,6):
+    print(number)
+
+    
+1
+2
+3
+4
+5
+for S in range(1,13):
+    print(S, '* 5 =', S*5)
+
+    
+1 * 5 = 5
+2 * 5 = 10
+3 * 5 = 15
+4 * 5 = 20
+5 * 5 = 25
+6 * 5 = 30
+7 * 5 = 35
+8 * 5 = 40
+9 * 5 = 45
+10 * 5 = 50
+11 * 5 = 55
+12 * 5 = 60
+
+#While-loop:
+number = 1
+
+while number <= 5:
+    print(number)
+    number = number + 1
+
+    
+1
+2
+3
+4
+5
+name = 'Kumar'
+N = 0
+
+while N < len(name):
+    print(name[N])
+    N = N + 1
+
+    
+K
+u
+m
+a
+r
+B = 2
+
+while B <= 5:
+    print(B, 'x 2 =', B*2)
+    B = B + 1
+
+    
+2 x 2 = 4
+3 x 2 = 6
+4 x 2 = 8
+5 x 2 = 10
+while number <= 11:
+    print(number, 'x 2 =', number*2)
+    number = number + 1
+
+    
+6 x 2 = 12
+7 x 2 = 14
+8 x 2 = 16
+9 x 2 = 18
+10 x 2 = 20
+11 x 2 = 22
