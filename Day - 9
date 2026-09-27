@@ -1,0 +1,31 @@
+#Dictionary:
+SK = {'Company' : 'MKB', 'Year' : 2024, 'Location' : 'Chennai', 'Location' : 'Arakkonam'}
+SK
+{'Company': 'MKB', 'Year': 2024, 'Location': 'Arakkonam'}
+Phone = {'name' : 'OPPO', 'Model' : 'F Pro', 'Price' : 30000}
+Phone
+{'name': 'OPPO', 'Model': 'F Pro', 'Price': 30000}
+Phone.fromkeys(SK)
+{'Company': None, 'Year': None, 'Location': None}
+Phone.get('name')
+'OPPO'
+Phone.keys()
+dict_keys(['name', 'Model', 'Price'])
+Phone.values()
+dict_values(['OPPO', 'F Pro', 30000])
+Phone.items()
+dict_items([('name', 'OPPO'), ('Model', 'F Pro'), ('Price', 30000)])
+print(Phone)
+{'name': 'OPPO', 'Model': 'F Pro', 'Price': 30000}
+SK.fromkeys(Phone)
+{'name': None, 'Model': None, 'Price': None}
+SK.get('Company')
+'MKB'
+SK.keys()
+dict_keys(['Company', 'Year', 'Location'])
+SK.values()
+dict_values(['MKB', 2024, 'Arakkonam'])
+SK.items()
+dict_items([('Company', 'MKB'), ('Year', 2024), ('Location', 'Arakkonam')])
+print(SK)
+{'Company': 'MKB', 'Year': 2024, 'Location': 'Arakkonam'}
