@@ -1,0 +1,70 @@
+Input:
+print('========== STUDENT MARKSHEET ==========')
+
+name = input('Enter student name: ')
+
+print("-------------------------------")
+
+Tamil = int(input('Enter Tamil mark: '))
+English = int(input('Enter English mark: '))
+Mathematics = int(input('Enter Mathematics mark: '))
+Science = int(input('Enter Science mark: '))
+Social = int(input('Enter Social mark: '))
+Accountancy = int(input('Enter Accountancy mark: '))
+
+total = Tamil + English + Mathematics + Science + Social + Accountancy
+average = total / 6
+
+if average >=90 and average <= 100:
+    Grade = 'O'
+elif average >=80 and average <=89:
+    Grade = 'A'
+elif average >=70 and average <=79:
+    Grade = 'B'
+elif average >=60 and average <=69:
+    Grade = 'C'
+elif average >=50 and average <=59:
+    Grade = 'D'
+elif average >=40 and average <=49:
+    Grade = 'E'
+elif average >=1 and average <=39:
+    Grade = 'F'
+else:
+    Grade = 'Invalid Mark'
+
+print('========== STUDENT MARKSHEET ==========')
+print('Student Name:', name)
+print('Tamil:', Tamil)
+print('English:', English)
+print('Mathematics:', Mathematics)
+print('Science:', Science)
+print('Social:', Social)
+print('Accountancy:', Accountancy)
+print("-------------------------------")
+print('Total Mark:', total)
+print('Average:', average)
+print('Grade:', Grade)
+print("-------------------------------")
+Output:
+========== STUDENT MARKSHEET ==========
+Enter student name: R SARANKUMAR
+-------------------------------
+Enter Tamil mark: 87
+Enter English mark: 74
+Enter Mathematics mark: 66
+Enter Science mark: 59
+Enter Social mark: 42
+Enter Accountancy mark: 100
+========== STUDENT MARKSHEET ==========
+Student Name: R SARANKUMAR
+Tamil: 87
+English: 74
+Mathematics: 66
+Science: 59
+Social: 42
+Accountancy: 100
+-------------------------------
+Total Mark: 428
+Average: 71.33333333333333
+Grade: B
+-------------------------------
