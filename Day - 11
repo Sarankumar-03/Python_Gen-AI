@@ -1,0 +1,47 @@
+#FCS - FLOW CONTROL STATEMENT
+
+#Break
+#Continue
+#Pass
+#BREAK
+for i in range(100,120):
+    if i == 108:
+        break
+    print(i, end=' ')
+100 101 102 103 104 105 106 107
+#CONTINUE
+for i in range(100,120):
+    if i == 108:
+        continue
+    print(i, end=' ')
+100 101 102 103 104 105 106 107 109 110 111 112 113 114 115 116 117 118 119
+#PASS
+for i in range(100,120):
+    if i == 108:
+        print(i, end=' ')
+    pass
+108
+#STUDENT MARKS - FLOW CONTROL STATEMENT
+
+marks = [85, 72, 0, 91, 35, 100, 150, 78]
+
+for mark in marks:
+    #Break: Stop the loop if mark is invalid.
+    if mark > 100:
+        print('Invalid Mark', mark)
+        break
+    #Continue: Skip the Student if absent
+    if mark == 0:
+        print('Student is Absen')
+        continue
+    #Pass: Do nothing for marks, below 40 'just it will pass'.
+    if mark < 40:
+        pass
+    print('Student Mark:', mark)
+Student Mark: 85
+Student Mark: 72
+Student is Absen
+Student Mark: 91
+Student Mark: 35
+Student Mark: 100
+Invalid Mark 150
