@@ -1,0 +1,7 @@
+def data(team,captian,tagline):
+    print('my fav team',team,'my captian',captian,'team tagline',tagline)
+
+
+
+data(team, captian, tagline)
+my fav team team my captian captian team tagline tagline
