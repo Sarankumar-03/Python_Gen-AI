@@ -1,0 +1,34 @@
+#Types of Arguments using with only in UDF - User Defined Function:
+#Default Argument:
+def Hospital(name='R.lokeshkumar', working='Doctor', city='chennai'):
+    print('My name is', name, 'I am working as', working, 'and my city is', city)
+
+
+Hospital()
+My name is R.lokeshkumar I am working as Doctor and my city is chennai
+#Positional Argumen:
+def Hospital(name, working, city):
+    print('My name is', name, 'I am working as', working, 'and my city is', city)
+
+
+Hospital('R.lokeshkumar', 'Doctor', 'chennai')
+My name is R.lokeshkumar I am working as Doctor and my city is chennai
+#Keyword Argument:
+def Hospital(name, working, city):
+    print('My name is', name, 'I am working as', working, 'and my city is', city)
+
+
+Hospital(name='lokeshkumar', working='Doctor', city='chennai')
+My name is lokeshkumar I am working as Doctor and my city is chennai
+Hospital(name='lokeshkumar', working='Accountant', city='chennai')
+My name is lokeshkumar I am working as Accountant and my city is chennai
+#Arbitrary Argument:
+def Hospital(*Doctors):
+    for i in Doctors:
+        print('Hi Dr', i, "Tomorrow, we have a board meeting with all doctors and our hospital's MD.")
+
+        
+Hospital('R.LokeshKumar', 'S.Raja', 'M.Balasundharam')
+Hi Dr R.LokeshKumar Tomorrow, we have a board meeting with all doctors and our hospital's MD.
+Hi Dr S.Raja Tomorrow, we have a board meeting with all doctors and our hospital's MD.
+Hi Dr M.Balasundharam Tomorrow, we have a board meeting with all doctors and our hospital's MD.
