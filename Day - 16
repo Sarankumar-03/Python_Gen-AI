@@ -51,13 +51,13 @@ print(text.count("o"))#Count 'o'
 2
 print(text.find("Programming"))#Find position
 7
-INPUT:
+INPUT :
 student_name =' saran kumar R '
 course = 'python is a high level programming language'
 
 print(student_name.strip().title())
 print(course.upper())
-OUTPUT:(RUN)
+OUTPUT :(RUN)
 ==================================================================== RESTART: C:/Python314/All Dotted Functions..py ====================================================================
 Saran Kumar R
 PYTHON IS A HIGH LEVEL PROGRAMMING LANGUAGE
