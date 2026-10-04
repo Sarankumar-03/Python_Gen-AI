@@ -1,0 +1,63 @@
+#Dotted Functions:
+# Dictionary functions:
+student = {"name": "Saran", "age": 22, "course": "Python"}
+student
+{'name': 'Saran', 'age': 22, 'course': 'Python'}
+name = 'sarankumar'
+numbers = [10, 20, 30, 40, 50]
+name
+'sarankumar'
+numbers
+[10, 20, 30, 40, 50]
+#string functions:
+print(name.upper())#Convert to uppercase
+SARANKUMAR
+print(name.lower())#Convert to lowercase
+sarankumar
+print(name.strip())#Remove spaces
+sarankumar
+print(name.replace("a", "@"))#Replace characters
+s@r@nkum@r
+print(name.title())
+Sarankumar
+# List functions:
+numbers.append(60)#Add an item
+numbers.insert(0, 5)#Insert an item
+numbers.remove(30)#Remove an item
+numbers.sort()#Sort the list
+print(numbers)
+[5, 10, 20, 40, 50, 60]
+# String splitting:
+sentence = 'Python is easy to learn'
+words = sentence.split()#Split sentence into words
+print(words)
+['Python', 'is', 'easy', 'to', 'learn']
+#Dictionary functions:
+student = {"name": "Saran", "age": 22, "course": "Python"}
+print(student.keys())#Display keys
+dict_keys(['name', 'age', 'course'])
+print(student.values())#Display values
+dict_values(['Saran', 22, 'Python'])
+print(student.items())#Display key value pairs
+dict_items([('name', 'Saran'), ('age', 22), ('course', 'Python')])
+#Argument functions:
+print("Python".startswith("Py"))
+True
+print("Python".endswith("on"))
+True
+#Count and find:
+text = 'Python Programming'
+print(text.count("o"))#Count 'o'
+2
+print(text.find("Programming"))#Find position
+7
+INPUT:
+student_name =' saran kumar R '
+course = 'python is a high level programming language'
+
+print(student_name.strip().title())
+print(course.upper())
+OUTPUT:(RUN)
+==================================================================== RESTART: C:/Python314/All Dotted Functions..py ====================================================================
+Saran Kumar R
+PYTHON IS A HIGH LEVEL PROGRAMMING LANGUAGE
