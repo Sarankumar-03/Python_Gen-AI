@@ -1,0 +1,71 @@
+# BUILT-IN FUNCTIONS
+
+numbers = [10, 20, 30, 40, 50]
+names = ["John", "Alex", "David", "Bob"]
+ages = [20, 25, 30, 35]
+print("========== BUILT-IN FUNCTIONS ==========")
+print("Numbers:", numbers)
+print("Length:", len(numbers))
+print("Smallest:", min(numbers))
+print("Largest:", max(numbers))
+print("Total:", sum(numbers))
+print("Sorted:", sorted(numbers))
+print("Sorted:", sorted(names))
+print("Positive Value:", abs(-10))
+print("PositiveValue:", abs(20))
+print("any:", any(numbers))
+print("bool:", bool(10))
+print("bool:", bool(0))
+print("pow:", pow(2, 3))
+for index, name in enumerate(names):
+    print("enumerate:", index, name)
+for name, age in zip(names, ages):
+    print("zip:", name, age)
+
+# MATH FUNCTIONS
+
+import math
+
+number = 25
+print("========== MATH FUNCTIONS ==========")
+print("Square root:", math.sqrt(number))
+print("Square:", math.pow(number, 2))
+print("Ceiling:", math.ceil(10.5))
+print("Floor:", math.floor(10.5))
+print("Factorial:", math.factorial(6))
+print("pow:", math.pow(2, 3))
+print("fabs:", math.fabs(-25))
+print("gdc:", math.gcd(12, 18))
+print("lcm:", math.lcm(4, 6))
+print("sin:", math.sin(0))
+print("cos:", math.cos(0))
+print("tan:", math.tan(0))
+print("log10:", math.log10(100))
+print("isqrt:", math.isqrt(25))
+# LAMBDA FUNCTIONS
+a=10
+b=20
+c=5
+add = lambda a, b: a + b
+subtract = lambda a, b: a - b
+square = lambda a: b * c
+divide = lambda a, b: a / b
+even = lambda a: b % 2 == 0
+print("========== LAMBDA FUNCTIONS ==========")
+print("Addition:", add(a, b))
+print("Subtract:", subtract(a, b))
+print("Square:", square(5))
+print("Division:", divide(20, 5))
+print("Is even:", even(10))
+length = lambda word: len(word)
+print("length:", length("Python"))
+Gift = lambda name: "Hello " + name
+print("Hellow to name:", Gift("Saran"))
+num=[1, 2, 3, 4, 5]
+squares = list(map(lambda a: b * c, numbers))
+print("map:", squares)
+num1 = [1, 2, 3, 4, 5, 6]
+even_numbers = list(filter(lambda x: x % 2 == 0, num1))
+print("filter(even):", even_numbers)
+result = list(filter(lambda x: x > 10, numbers))
+print("Greater than 10:", result)
