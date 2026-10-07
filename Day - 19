@@ -1,0 +1,163 @@
+f=open('Data.txt', 'w+')
+
+f=open('Data.txt', 'r')
+
+f
+<_io.TextIOWrapper name='Data.txt' mode='r' encoding='cp1252'>
+f.read()
+'SARANKUMAR\nLokesh\nManoj\nHarish\nKaviya\nLeela\nRevathi'
+f.read()
+''
+f.close()
+f
+<_io.TextIOWrapper name='Data.txt' mode='r' encoding='cp1252'>
+f=open('Data.txt')
+f
+<_io.TextIOWrapper name='Data.txt' mode='r' encoding='cp1252'>
+f.read()
+'SARANKUMAR\nLokesh\nManoj\nHarish\nKaviya\nLeela\nRevathi'
+f.close()
+f=open('Data.txt')
+f
+<_io.TextIOWrapper name='Data.txt' mode='r' encoding='cp1252'>
+f.read(5)
+'SARAN'
+f.read(5)
+'KUMAR'
+f.read(5)
+'\nLoke'
+f.read(5)
+'sh\nMa'
+f.read(5)
+'noj\nH'
+f.read(10)
+'arish\nKavi'
+f.read(10)
+'ya\nLeela\nR'
+f.read(10)
+'evathi'
+f.read(10)
+''
+f.close()
+f
+<_io.TextIOWrapper name='Data.txt' mode='r' encoding='cp1252'>
+f.readline()
+Traceback (most recent call last):
+  File "<pyshell#26>", line 1, in <module>
+    f.readline()
+ValueError: I/O operation on closed file.
+f=open('Data.txt')
+f.readline()
+'SARANKUMAR\n'
+f.readline()
+'Lokesh\n'
+f.readline()
+'Manoj\n'
+f.readline()
+'Harish\n'
+f.readline()
+'Kaviya\n'
+f.readline()
+'Leela\n'
+f.readline()
+'Revathi'
+f.readline()
+''
+f.close()
+f
+<_io.TextIOWrapper name='Data.txt' mode='r' encoding='cp1252'>
+f=open('Data.txt')
+f
+<_io.TextIOWrapper name='Data.txt' mode='r' encoding='cp1252'>
+f.readlines()
+['SARANKUMAR\n', 'Lokesh\n', 'Manoj\n', 'Harish\n', 'Kaviya\n', 'Leela\n', 'Revathi']
+for i in f.readlines():
+    print(i)
+
+    
+
+f.close()
+f=open('Data.txt')
+for i in f.readlines():
+    print(i)
+
+    
+SARANKUMAR
+
+Lokesh
+
+Manoj
+
+Harish
+
+Kaviya
+
+Leela
+
+Revathi
+#Find a File Location:
+f.close()
+f=open('Data.txt')
+for i in f.readline():
+    print(i)
+
+    
+S
+A
+R
+A
+N
+K
+U
+M
+A
+R
+
+
+#Access a File:
+f.close()
+f=open('Data.txt', 'w+')
+
+f
+<_io.TextIOWrapper name='Data.txt' mode='w+' encoding='cp1252'>
+f.write('Ravi\nKumar\nMoghan\nNaveen\nBharath', )
+32
+f.close()
+with open('Data.txt', 'a') as f:
+    f.writelines('\n24\n37')
+
+    
+f=open('Data.txt', 'w+')
+f.tell()
+0
+f.read(5)
+''
+f.tell()
+0
+with open('Data.txt', 'a') as f:
+    f.writelines('\n24\n37')
+
+    
+f=open('Data.txt')
+f.tell()
+0
+f.read(5)
+'\n24\n3'
+f.tell()
+7
+f.seek()
+Traceback (most recent call last):
+  File "<pyshell#75>", line 1, in <module>
+    f.seek()
+TypeError: seek expected at least 1 argument, got 0
+#Move the Conser:
+f.seek(10)
+10
+f.tell()
+10
+f.read()
+''
+f.seek(0)
+0
+f.read()
+'\n24\n37'
