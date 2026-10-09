@@ -1,0 +1,60 @@
+#File Handling:
+f=open('sarankumar.txt', 'w+')
+f.close()
+for i in range(0,4):
+    for j in range(i):
+        print('*', end=' ')
+    print()
+
+    
+
+* 
+* * 
+* * * 
+Games=['Football', 'Volleyball', 'Cricket', 'Tennis', 'Hockey']
+f=open('sarankumar.txt', 'w+')
+f.close()
+f=open('sarankumar.txt', 'w+')
+f.write('Games')
+5
+f.close()
+f=open('sarankumar.txt', 'w+')
+f=writelines('Games')
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    f=writelines('Games')
+NameError: name 'writelines' is not defined
+f.writelines('Games')
+f.close()
+def gam():
+    for i in range(0,4):
+        for j in range(i):
+            print(i, end=' ')
+        print()
+
+        
+gam()
+
+1 
+2 2 
+3 3 3 
+def gam():
+    f=open('sarankumar.txt', 'w+')
+    for i in range(0,4):
+        for j in range(i):
+            f.write(str(i))
+        f.write('\n')
+    f.close()
+
+    
+gam()
+def gam():
+    f=open('sarankumar.txt', 'w+')
+    for i in range(0,4):
+        for j in range(i):
+            f.write('i')
+        f.write('\n')
+    f.close()
+
+    
+gam()
