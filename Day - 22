@@ -1,0 +1,17 @@
+INPUT:
+#Pandas:
+
+import pandas as pd
+
+# Student details
+data = {"Name": ["Arun", "Priya", "Rahul"], "Marks": [85, 90, 65]}
+
+# Create a table
+df = pd.DataFrame(data)
+print(df)
+OUTPUT:
+========================================================================= RESTART: C:/Python314/Pandas Model.py ========================================================================
+    Name  Marks
+0   Arun     85
+1  Priya     90
+2  Rahul     65
