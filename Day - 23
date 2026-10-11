@@ -83,7 +83,6 @@ dtype: object
 Family_Members = pd.Series({'Rames':95, 'Leela':85, 'Saran':75, 'Lokesh':65})
 print("Family_Members:")
 print(Family_Members)
-
 Family_Members:
 Rames     95
 Leela     85
