@@ -1,0 +1,92 @@
+#Pandas:
+import pandas as pd
+#creating a Series from a list:
+
+#INTRINSIC INDEX VALUE.(Default Index)
+Games = pd.Series(['carrom', 'cricket', 'Tennis', 'Football', 'Relay'])
+print("Series of Games:")
+print(Games)
+print("\nType:", type('Games'))
+print(                                    )
+
+#Create a Series with custom index (lables)
+
+#EXTRINSIC INDEX VALUE.(Create inder value)
+Rate = pd.Series([23, 45, 67, 103, 75], index=['carrom', 'cricket', 'Tennis', 'Football', 'Relay'])
+print("Games Rate:")
+print(Rate)
+print(                                    )
+
+#Float:
+Rate = pd.Series([23.00, 45.00, 67.00, 103.00, 75.00], index=['carrom', 'cricket', 'Tennis', 'Football', 'Relay'])
+print("Games Rate:")
+print(Rate)
+Series of Games:
+0      carrom
+1     cricket
+2      Tennis
+3    Football
+4       Relay
+dtype: str
+
+Type: <class 'str'>
+
+Games Rate:
+carrom       23
+cricket      45
+Tennis       67
+Football    103
+Relay        75
+dtype: int64
+
+Games Rate:
+carrom       23.0
+cricket      45.0
+Tennis       67.0
+Football    103.0
+Relay        75.0
+dtype: float64
+
+#Creating a Series with hide/custom the index (lables)
+Watch = pd.Series(['Ultra4', 'H20', 'Poze', 'Minimalists', 'Strom3'], index = ['Apple', 'GOBOULT', 'Sonata', 'Fastrack', 'Boat'])
+print(Watch)
+print(                                    )
+
+#Data Filtering:
+Watch = pd.Series(['Ultra4', 'H20', 'Strominfinity', 'Poze', 'Minimalists', 'Strom3'], 
+                  index = ['Apple', 'GOBOULT', 'Boat', 'Sonata', 'Fastrack', 'Boat'])
+print('List Boat watch:', Watch['Boat'])
+print(                                    )
+
+#Type - Object:
+Watch = pd.Series(['Ultra4', 20, 'Poze', 'Minimalists', 'Strom3'], index = ['Apple', 'GOBOULT', 'Sonata', 'Fastrack', 'Boat'])
+print(Watch)
+Apple            Ultra4
+GOBOULT             H20
+Sonata             Poze
+Fastrack    Minimalists
+Boat             Strom3
+dtype: str
+
+List Boat watch: Boat    Strominfinity
+Boat           Strom3
+dtype: str
+
+Apple            Ultra4
+GOBOULT              20
+Sonata             Poze
+Fastrack    Minimalists
+Boat             Strom3
+dtype: object
+
+#Series from a Dictionary:
+Family_Members = pd.Series({'Rames':95, 'Leela':85, 'Saran':75, 'Lokesh':65})
+print("Family_Members:")
+print(Family_Members)
+
+Family_Members:
+Rames     95
+Leela     85
+Saran     75
+Lokesh    65
+dtype: int64
