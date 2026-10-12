@@ -1,0 +1,113 @@
+#Pandas:
+#Data Frame:
+
+import pandas as pd
+
+data = {"Name": ['Arun', 'Bala', 'Charan', 'David', 'Ezhil', 'Farhan'], 
+        "Age": [20, 30, 26, 22, 28, 24], 
+        "Salary": [20000, 25000, 30000, 35000, 40000, 45000]}
+
+df = pd.DataFrame(data)
+print("DataFrame:")
+print(df)
+print('----------------------------------------------------------------')
+#head - Print First 5 in the data.
+print("Head:")
+print(df.head(2))
+print('----------------------------------------------------------------')
+#Tail - Print Last 5 in the data.
+print("Tail:")
+print(df.tail())
+print('----------------------------------------------------------------')
+#info - Print All detailed information about the data.
+print("info:")
+df.info()
+print('----------------------------------------------------------------')
+#describe - Print in (.).
+print("describe:")
+print(df.describe())
+print('----------------------------------------------------------------')
+print("describe - all:")
+print(df.describe(include="all"))
+print('----------------------------------------------------------------')
+#iloc - Access by position (rows & Colums).
+print("iloc:")
+print(df.iloc[0:3, 0:2])
+print('----------------------------------------------------------------')
+#loc - lable the (Rows & Colums).
+print("loc[]:")
+print(df.loc[0:2, ["Name", "Age"]])
+print('----------------------------------------------------------------')
+
+OUTPUT:
+DataFrame:
+     Name  Age  Salary
+0    Arun   20   20000
+1    Bala   30   25000
+2  Charan   26   30000
+3   David   22   35000
+4   Ezhil   28   40000
+5  Farhan   24   45000
+----------------------------------------------------------------
+Head:
+   Name  Age  Salary
+0  Arun   20   20000
+1  Bala   30   25000
+----------------------------------------------------------------
+Tail:
+     Name  Age  Salary
+1    Bala   30   25000
+2  Charan   26   30000
+3   David   22   35000
+4   Ezhil   28   40000
+5  Farhan   24   45000
+----------------------------------------------------------------
+info:
+<class 'pandas.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   Name    6 non-null      str  
+ 1   Age     6 non-null      int64
+ 2   Salary  6 non-null      int64
+dtypes: int64(2), str(1)
+memory usage: 306.0 bytes
+----------------------------------------------------------------
+describe:
+             Age        Salary
+count   6.000000      6.000000
+mean   25.000000  32500.000000
+std     3.741657   9354.143467
+min    20.000000  20000.000000
+25%    22.500000  26250.000000
+50%    25.000000  32500.000000
+75%    27.500000  38750.000000
+max    30.000000  45000.000000
+----------------------------------------------------------------
+describe - all:
+        Name        Age        Salary
+count      6   6.000000      6.000000
+unique     6        NaN           NaN
+top     Arun        NaN           NaN
+freq       1        NaN           NaN
+mean     NaN  25.000000  32500.000000
+std      NaN   3.741657   9354.143467
+min      NaN  20.000000  20000.000000
+25%      NaN  22.500000  26250.000000
+50%      NaN  25.000000  32500.000000
+75%      NaN  27.500000  38750.000000
+max      NaN  30.000000  45000.000000
+----------------------------------------------------------------
+iloc:
+     Name  Age
+0    Arun   20
+1    Bala   30
+2  Charan   26
+----------------------------------------------------------------
+loc[]:
+     Name  Age
+0    Arun   20
+1    Bala   30
+2  Charan   26
+----------------------------------------------------------------
