@@ -1,0 +1,70 @@
+#Simple Project (1) - (Rock, Paper & Scissors):
+
+import random
+import string
+
+def rock_paper_scissors():
+    print("\n--- Rock Paper Scissors ---")
+    options = ["rock", "paper", "scissors"]
+    user = input("Choose rock, paper or scissors: ").lower()
+    computer = random.choice(options)
+    print("Computer chose:", computer)
+ 
+    if user not in options:
+        print("Invalid choice!")
+    elif user == computer:
+        print("It's a tie!")
+    elif (user == "rock" and computer == "scissors") or \
+         (user == "paper" and computer == "rock") or \
+         (user == "scissors" and computer == "paper"):
+        print("You win!")
+    else:
+        print("You lose!")
+
+# ---------- Main Menu ----------
+def main():
+    while True:
+        print("                                            ")
+        print("============================================")
+        print('--------- Rock Paper Scissors Game ---------')
+        print("============================================")
+        print("1. Rock Paper Scissors")
+        print("0.  Exit")
+        print("============================================")
+        choice = input("Choose a project (1-0): ")
+        try:
+            if choice == "1":
+                rock_paper_scissors()
+            elif choice == "0":
+                print("Goodbye!")
+                break
+            else:
+                print("Invalid choice, try again.")
+        except ValueError:
+            print("Oops! Please enter a valid number.")
+main()
+OUTPUT:
+========== RESTART: C:/Python314/Project (1) - Rock Paper Scissors.py ==========
+                                            
+============================================
+--------- Rock Paper Scissors Game ---------
+============================================
+1. Rock Paper Scissors
+0.  Exit
+============================================
+Choose a project (1-0): 1
+
+--- Rock Paper Scissors ---
+Choose rock, paper or scissors: scissors
+Computer chose: paper
+You win!
+                                            
+============================================
+--------- Rock Paper Scissors Game ---------
+============================================
+1. Rock Paper Scissors
+0.  Exit
+============================================
+Choose a project (1-0): 0
+Goodbye!
+
