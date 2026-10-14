@@ -1,0 +1,40 @@
+#Interactive Project - (2) - "AGE Calculator":
+
+print("============================================")
+print("               AGE CALCULATOR               ")
+print("============================================")
+def age_calculator():
+    print("\n--- Age Calculator ---")
+    birth_year = int(input("Enter your birth year: "))
+    current_year = int(input("Enter the current year: "))
+    age = current_year - birth_year
+    print("You are", age, "years old.")
+while True:
+    print("1. Age Calculator")
+    print("0. Exit")
+    choice = input("Choose a project: ")
+    if choice == "1":
+        age_calculator()
+    elif choice == "0":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice, try again!")
+
+OUTPUT:
+============= RESTART: C:\Python314\Project (2) - Age Calculator.py ============
+============================================
+               AGE CALCULATOR               
+============================================
+1. Age Calculator
+0. Exit
+Choose a project: 1
+
+--- Age Calculator ---
+Enter your birth year: 2003
+Enter the current year: 2026
+You are 23 years old.
+1. Age Calculator
+0. Exit
+Choose a project: 0
+Goodbye!
