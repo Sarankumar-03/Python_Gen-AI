@@ -1,0 +1,25 @@
+#System Login Interface:
+
+username = "R Sarankumar"
+password = "python123"
+print("                                          ")
+print("===============System Login===============")
+user = input("Enter username: ")
+pwd = input("Enter password: ")
+print("==========================================")
+if user == username and pwd == password:
+    print("Login successful!")
+else:
+    print("Invalid login")
+
+OUTPUT:
+===============System Login===============
+Enter username: r sarankumar
+Enter password: python123
+==========================================
+Invalid login
+===============System Login===============
+Enter username: R Sarankumar
+Enter password: python123
+==========================================
+Login successful!
