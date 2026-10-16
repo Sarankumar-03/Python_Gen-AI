@@ -1,0 +1,87 @@
+#Interactive Application Projects:
+
+#PROJECT(1) - SIMPLE INTEREST:
+def simple_interest():
+    principal = float(input("Enter principal amount: "))
+    rate = float(input("Enter annual interest rate (%): "))
+    time = float(input("Enter time in years: "))
+    
+    interest = (principal * rate * time) / 100
+    total = principal + interest
+    
+    print("Simple Interest:", round(interest, 2))
+    print("Total Amount:", round(total, 2))
+
+#PROJECT(2) - COMPOUND INTEREST:
+def compound_interest():
+    principal = float(input("Enter principal amount: "))
+    rate = float(input("Enter annual interest rate (%): "))
+    time = float(input("Enter time in years: "))
+
+    amount = principal * (1 + rate / 100) ** time
+    interest = amount - principal
+
+    print("Compound Interest:", round(interest, 2))
+    print("Final Amount:", round(amount, 2))
+
+#Table:
+while True:
+    print("                               ")
+    print("======= PYTHON PROJECTS =======")
+    print("1. Simple Interest Calculator")
+    print("2. Compound Interest Calculator")
+    print("0. Exit")
+    print("===============================")
+    choice = input("Enter your choice: ")
+    print("===============================")
+    print("                               ")
+    if choice == "1":
+        simple_interest()
+
+    elif choice == "2":
+        compound_interest()
+
+    elif choice == "0":
+        print("Thank you for learning Python!")
+        break
+    else:
+        print("Invalid choice. Please select 0, 1, 2, or 3.")
+
+OUTPUT:
+======= PYTHON PROJECTS =======
+1. Simple Interest Calculator
+2. Compound Interest Calculator
+0. Exit
+===============================
+Enter your choice: 1
+===============================
+                               
+Enter principal amount: 200000
+Enter annual interest rate (%): 10
+Enter time in years: 7
+Simple Interest: 140000.0
+Total Amount: 340000.0
+                               
+======= PYTHON PROJECTS =======
+1. Simple Interest Calculator
+2. Compound Interest Calculator
+0. Exit
+===============================
+Enter your choice: 2
+===============================
+                               
+Enter principal amount: 500000
+Enter annual interest rate (%): 5
+Enter time in years: 15
+Compound Interest: 539464.09
+Final Amount: 1039464.09
+                               
+======= PYTHON PROJECTS =======
+1. Simple Interest Calculator
+2. Compound Interest Calculator
+0. Exit
+===============================
+Enter your choice: 0
+===============================
+                               
+Thank you for learning Python!
