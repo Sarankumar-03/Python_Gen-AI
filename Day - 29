@@ -1,20 +1,17 @@
 #Translator App:
 
-import random
-import time
-import datetime
-
 def project1():
     words = {
         "hello": ["Namaste", "Hola"],
         "thanks": ["Dhanyavaad", "Gracias"],
         "water": ["Paani", "Agua"],
         "friend": ["Dost", "Amigo"],
-        "good morning": ["Suprabhat", "Buenos dias"],}
+        "good morning": ["காலை வணக்கம்", "Suprabhat", "Buenos dias"]}
     w = input("Enter English word: ").lower()
     if w in words:
-        print("Hindi:", words[w][0])
-        print("Spanish:", words[w][1])
+        print("Tamil:", words[w][0])
+        print("Hindi:", words[w][1])
+        print("Spanish:", words[w][2])
     else:
         print("Word not in my small list")
 names = ["1", "Translator App"]
@@ -25,7 +22,7 @@ while True:
     print("1 . Translator App")
     print("0 . Exit")
     print("=======================================")
-    choice = int(input("\nEnter project number: "))
+    choice = int(input("Enter project number: "))
     print("=======================================")
     if choice == 0:
         print("Goodbye!")
@@ -40,10 +37,10 @@ OUTPUT:
 1 . Translator App
 0 . Exit
 =======================================
-
 Enter project number: 1
 =======================================
 Enter English word: Good Morning
+Tamil: காலை வணக்கம்
 Hindi: Suprabhat
 Spanish: Buenos dias
 
@@ -51,8 +48,6 @@ Spanish: Buenos dias
 1 . Translator App
 0 . Exit
 =======================================
-
 Enter project number: 0
 =======================================
 Goodbye!
-
