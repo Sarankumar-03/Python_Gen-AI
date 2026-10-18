@@ -1,0 +1,58 @@
+#Translator App:
+
+import random
+import time
+import datetime
+
+def project1():
+    words = {
+        "hello": ["Namaste", "Hola"],
+        "thanks": ["Dhanyavaad", "Gracias"],
+        "water": ["Paani", "Agua"],
+        "friend": ["Dost", "Amigo"],
+        "good morning": ["Suprabhat", "Buenos dias"],}
+    w = input("Enter English word: ").lower()
+    if w in words:
+        print("Hindi:", words[w][0])
+        print("Spanish:", words[w][1])
+    else:
+        print("Word not in my small list")
+names = ["1", "Translator App"]
+while True:
+    print("\n========== PYTHON PROJECTS ==========")
+    for i in range(0&1):
+        print(i + 1, ".", names[i])
+    print("1 . Translator App")
+    print("0 . Exit")
+    print("=======================================")
+    choice = int(input("\nEnter project number: "))
+    print("=======================================")
+    if choice == 0:
+        print("Goodbye!")
+        break
+    elif choice == 1:
+        project1()
+    else:
+        print("Please enter a number from 0 or 1")
+
+OUTPUT:
+========== PYTHON PROJECTS ==========
+1 . Translator App
+0 . Exit
+=======================================
+
+Enter project number: 1
+=======================================
+Enter English word: Good Morning
+Hindi: Suprabhat
+Spanish: Buenos dias
+
+========== PYTHON PROJECTS ==========
+1 . Translator App
+0 . Exit
+=======================================
+
+Enter project number: 0
+=======================================
+Goodbye!
+
