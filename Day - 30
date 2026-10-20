@@ -1,0 +1,353 @@
+#20 Projects:
+
+import random
+import time
+import datetime
+
+#1.CALCULATOR:
+def project1():
+    a = float(input("Enter first number: "))
+    op = input("Enter operator (+ - * /): ")
+    b = float(input("Enter second number: "))
+    if op == "+":
+        print("Answer =", a + b)
+    elif op == "-":
+        print("Answer =", a - b)
+    elif op == "*":
+        print("Answer =", a * b)
+    elif op == "/":
+        if b == 0:
+            print("Cannot divide by zero")
+        else:
+            print("Answer =", a / b)
+    else:
+        print("Wrong operator")
+
+#2.PASSWORD GENERATOR:
+def project2():
+    chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&"
+    length = int(input("Password length: "))
+    password = ""
+    for i in range(length):
+        password = password + random.choice(chars)
+    print("Your password:", password)
+#3.NUMBER GUESSING GAME:
+def project3():
+    secret = random.randint(1, 100)
+    tries = 0
+    print("I am thinking of a number between 1 and 100")
+    while True:
+        guess = int(input("Your guess: "))
+        tries = tries + 1
+        if guess < secret:
+            print("Too low")
+        elif guess > secret:
+            print("Too high")
+        else:
+            print("Correct! You took", tries, "tries")
+            break
+#4.ROCK PAPER SCISSORS:
+def project4():
+    choices = ["rock", "paper", "scissors"]
+    you = input("rock, paper or scissors? ").lower()
+    pc = random.choice(choices)
+    print("Computer chose:", pc)
+    if you == pc:
+        print("Draw")
+    elif you == "rock" and pc == "scissors":
+        print("You win!")
+    elif you == "paper" and pc == "rock":
+        print("You win!")
+    elif you == "scissors" and pc == "paper":
+        print("You win!")
+    else:
+        print("You lose!")
+#5.CURRENCY CONVERTER:
+def project5():
+    print("Currencies: USD, INR, EUR, GBP  (example rates)")
+    rates = {"USD": 1, "INR": 95.16, "EUR": 0.89, "GBP": 0.75}
+    amount = float(input("Amount: "))
+    f = input("From: ").upper()
+    t = input("To: ").upper()
+    if f in rates and t in rates:
+        usd = amount / rates[f]
+        print("Result:", usd * rates[t], t)
+    else:
+        print("Currency not available")
+#6.BMI CALCULATOR:
+def project6():
+    w = float(input("Weight (kg): "))
+    h = float(input("Height (meters): "))
+    bmi = w / (h * h)
+    print("Your BMI =", bmi)
+    if bmi < 18.5:
+        print("Underweight")
+    elif bmi < 40:
+        print("Normal")
+    elif bmi < 80:
+        print("Overweight")
+    else:
+        print("Obese")
+#7.AGE CALCULATOR:
+def project7():
+    y = int(input("Birth year: "))
+    m = int(input("Birth month (1-12): "))
+    d = int(input("Birth day: "))
+    today = datetime.date.today()
+    age = today.year - y
+    if today.month < m or (today.month == m and today.day < d):
+        age = age - 1
+    print("Your age is", age, "years")
+#8.SIMPLE INTEREST CALCULATOR:
+def project8():
+    p = float(input("Principal amount: "))
+    r = float(input("Rate of interest (%): "))
+    t = float(input("Time (years): "))
+    si = p * r * t / 100
+    print("Simple Interest =", si)
+    print("Total Amount =", p + si)
+#9.COMPOUND INTEREST CALCULATOR:
+def project9():
+    p = float(input("Principal amount: "))
+    r = float(input("Rate of interest (%): "))
+    t = int(input("Time (years): "))
+    amount = p
+    for year in range(t):
+        amount = amount + amount * r / 100
+    print("Total Amount =", amount)
+    print("Compound Interest =", amount - p)
+#10.STOPWATCH:
+def project10():
+    input("Press Enter to START")
+    start = time.time()
+    input("Press Enter to STOP")
+    end = time.time()
+    print("Time taken:", end - start, "seconds")
+#11.STUDENT GRADE CALCULATOR:
+def project11():
+    n = int(input("How many subjects? "))
+    total = 0
+    for i in range(n):
+        total = total + float(input("Marks for subject " + str(i + 1) + ": "))
+    avg = total / n
+    print("Total =", total, " Average =", avg)
+    if avg >= 90:
+        print("Grade A+")
+    elif avg >= 80:
+        print("Grade A")
+    elif avg >= 70:
+        print("Grade B")
+    elif avg >= 60:
+        print("Grade C")
+    elif avg >= 50:
+        print("Grade D")
+    else:
+        print("Fail")
+#12.TRANSLATOR APP:
+def project12():
+    words = {
+        "hello": ["Namaste", "Hola"],
+        "thanks": ["Dhanyavaad", "Gracias"],
+        "water": ["Paani", "Agua"],
+        "friend": ["Dost", "Amigo"],
+        "good morning": ["காலை வணக்கம்", "Suprabhat", "Buenos dias"]}
+    w = input("Enter English word: ").lower()
+    if w in words:
+        print("Tamil:", words[w][0])
+        print("Hindi:", words[w][1])
+        print("Spanish:", words[w][2])
+    else:
+        print("Word not in my small list")
+#13.CHAT APPLICATION:
+def project13():
+    print("Chat started. Type 'bye' to stop.")
+    while True:
+        msg = input("You: ").lower()
+        if msg == "bye":
+            print("Bot: Goodbye!")
+            break
+        elif "hello" in msg or "hi" in msg:
+            print("Bot: Hello! How are you?")
+        elif "how are you" in msg:
+            print("Bot: I am fine, thank you!")
+        elif "name" in msg:
+            print("Bot: I am PyBot.")
+        elif "python" in msg:
+            print("Bot: Python is awesome!")
+        else:
+            print("Bot: Tell me more...")
+#14.LOGIN SYSTEM:
+def project14():
+    users = {}
+    while True:
+        print("\n1.Register  2.Login  3.Exit")
+        c = input("Choose: ")
+        if c == "1":
+            name = input("New username: ")
+            if name in users:
+                print("Username already exists")
+            else:
+                users[name] = input("New password: ")
+                print("Registered!")
+        elif c == "2":
+            name = input("Username: ")
+            pw = input("Password: ")
+            if name in users and users[name] == pw:
+                print("Login successful. Welcome", name)
+            else:
+                print("Wrong username or password")
+        elif c == "3":
+            break
+#15.COUNTDOWN TIMER:
+def project15():
+    seconds = int(input("Enter seconds: "))
+    while seconds > 0:
+        print(seconds)
+        time.sleep(1)
+        seconds = seconds - 1
+    print("Time's up!")
+#16.DIGITAL CLOCK: (shows 10 seconds)
+def project16():
+    for i in range(10):
+        print(datetime.datetime.now().strftime("%H:%M:%S"))
+        time.sleep(1)
+#17.PERSONAL BUDGET MANAGER:
+def project17():
+    income = float(input("Monthly income: "))
+    rent = float(input("Rent: "))
+    food = float(input("Food: "))
+    travel = float(input("Travel: "))
+    other = float(input("Other: "))
+    spent = rent + food + travel + other
+    saving = income - spent
+    print("Total spent:", spent)
+    print("Savings:", saving)
+    if saving < 0:
+        print("Warning: You are overspending!")
+    else:
+        print("Good job, you are saving money!")
+#18.E-COMMERCE WEBSITE - (shopping in the console)
+def project18():
+    items = {"shirt": 500, "shoes": 1500, "watch": 2000, "bag": 800}
+    cart = []
+    total = 0
+    while True:
+        print("\n1.Show items  2.Add to cart  3.View cart  4.Checkout")
+        c = input("Choose: ")
+        if c == "1":
+            for i in items:
+                print(i, "- Rs.", items[i])
+        elif c == "2":
+            i = input("Item name: ").lower()
+            if i in items:
+                cart.append(i)
+                total = total + items[i]
+                print("Added")
+            else:
+                print("Item not found")
+        elif c == "3":
+            for i in cart:
+                print(i, "- Rs.", items[i])
+            print("Total: Rs.", total)
+        elif c == "4":
+            print("Thank you! Please pay Rs.", total)
+            break
+#19.DICTIONARY APP:
+def project19():
+    words = {"python": "A popular high level programming language",
+        "variable": "A name that stores a value",
+        "loop": "Code that repeats again and again",
+        "function": "A block of code that does one job",
+        "list": "A collection of items in order",}
+    w = input("Enter a word: ").lower()
+    if w in words:
+        print("Meaning:", words[w])
+    else:
+        print("Word not found")
+#20.CONTACT BOOK:
+def project20():
+    contacts = {}
+    while True:
+        print("\n1.Add  2.Search  3.Show all  4.Delete  5.Exit")
+        c = input("Choose: ")
+        if c == "1":
+            name = input("Name: ")
+            contacts[name] = input("Phone: ")
+        elif c == "2":
+            name = input("Name to search: ")
+            if name in contacts:
+                print(name, ":", contacts[name])
+            else:
+                print("Not found")
+        elif c == "3":
+            for name in contacts:
+                print(name, ":", contacts[name])
+        elif c == "4":
+            name = input("Name to delete: ")
+            if name in contacts:
+                contacts.pop(name)
+                print("Deleted")
+            else:
+                print("Not found")
+        elif c == "5":
+            break
+names = [
+    "Calculator", "Password Generator", "Number Guessing Game","Rock Paper Scissors",
+    "Currency Converter", "BMI Calculator", "Age Calculator", "Simple Interest Calculator",
+    "Compound Interest Calculator", "Stopwatch", "Student Grade Calculator", "Translator App",
+    "Chat Application", "Login System", "Countdown Timer", "Digital Clock", "Personal Budget Manager",
+    "E-Commerce Website", "Dictionary App", "Contact Book"]
+
+while True:
+    print("\n========== PYTHON 20 PROJECTS ==========")
+    for i in range(20):
+        print(i + 1, ".", names[i])
+    print("0 . Exit")
+    choice = int(input("\nEnter project number: "))
+    print("\n--- Running:", names[choice - 1] if choice > 0 else "Exit", "---\n")
+
+    if choice == 0:
+        print("Goodbye!")
+        break
+    elif choice == 1:
+        project1()
+    elif choice == 2:
+        project2()
+    elif choice == 3:
+        project3()
+    elif choice == 4:
+        project4()
+    elif choice == 5:
+        project5()
+    elif choice == 6:
+        project6()
+    elif choice == 7:
+        project7()
+    elif choice == 8:
+        project8()
+    elif choice == 9:
+        project9()
+    elif choice == 10:
+        project10()
+    elif choice == 11:
+        project11()
+    elif choice == 12:
+        project12()
+    elif choice == 13:
+        project13()
+    elif choice == 14:
+        project14()
+    elif choice == 15:
+        project15()
+    elif choice == 16:
+        project16()
+    elif choice == 17:
+        project17()
+    elif choice == 18:
+        project18()
+    elif choice == 19:
+        project19()
+    elif choice == 20:
+        project20()
+    else:
+        print("Please enter a number from 0 to 20")
