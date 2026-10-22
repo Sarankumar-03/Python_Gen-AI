@@ -1,0 +1,47 @@
+#TYPES OF VARIABLES in OOP's:
+#Class Variable:
+class School:
+    twelfth_Students = 'Black Board/Sitting Bench/Writing Table'
+    def SecA(self):
+        print('All the students have the access to use', School.twelfth_Students)
+    def SecB(Self):
+        print('All the students have the access to use', School.twelfth_Students)
+
+        
+s=School()
+s.SecA()
+All the students have the access to use Black Board/Sitting Bench/Writing Table
+s.SecB()
+All the students have the access to use Black Board/Sitting Bench/Writing Table
+#Local Variable:
+class School:
+    twelfth_Students = 'Black Board/Sitting Bench/Writing Table'
+    def SecA(self):
+        print('All the students have the access to use', School.twelfth_Students)
+    def SecB(Self):
+        local='Computer Lab'
+        print('All the students have the access to use', School.twelfth_Students)
+        print('All the Students have the access to use', local)
+
+        
+s=School()
+s.SecA()
+All the students have the access to use Black Board/Sitting Bench/Writing Table
+s.SecB()
+All the students have the access to use Black Board/Sitting Bench/Writing Table
+All the Students have the access to use Computer Lab
+#Global Variable:
+SL1='Science Lab'
+class School:
+    global SL1
+    def SecA(self):
+        print('All the students have the access to use', SL1)
+    def SecB(Self):
+        print('All the students have the access to use', SL1)
+
+        
+s=School()
+s.SecA()
+All the students have the access to use Science Lab
+s.SecB()
+All the students have the access to use Science Lab
