@@ -1,0 +1,58 @@
+#Inheritance = DATA ACCESS CONTROL:
+#Single Inheritance - (One Child class get access from one parent class):
+class Ramesh():
+    def work(self):
+        print('Mechanical Engineer')
+
+        
+class Saran(Ramesh):
+    pass
+
+s = Saran()
+s.work()
+Mechanical Engineer
+#Multiple Inheritance - (One Child class get access from 2 or 3 more different Parent class):
+class Ramesh():
+    def work(self):
+        print('Mechanical Engineer')
+
+        
+class Leela():
+    def job(self):
+        print('Cosmetologist')
+
+        
+class Lokesh():
+    def professional(self):
+        print('Doctor')
+
+        
+class Saran(Ramesh, Leela, Lokesh):
+    pass
+
+s = Saran()
+s.job()
+Cosmetologist
+s.professional()
+Doctor
+s.work()
+Mechanical Engineer
+#Multi-Level Inheritance - (Multiple Child Class get full access from one Parent class):
+class Ramesh():
+    def work(self):
+        print('Mechanical Engineer')
+
+        
+class Leela(Ramesh):
+    def job(self):
+        print('Cosmetologist')
+
+        
+class Saran(Leela):
+    pass
+
+s = Saran()
+s.job()
+Cosmetologist
+s.work()
+Mechanical Engineer
