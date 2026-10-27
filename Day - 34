@@ -1,0 +1,56 @@
+#INHERITANCE = DATA ACCESS CONTROL:
+#Hierarchical Inheritance: (Multiple Child classes get limited/restricted access from one parent class)
+class Ramesh:
+    def work(self):
+        print("Mechanical Engineer")
+
+        
+class Lokesh(Ramesh):
+    pass
+
+class Saran(Ramesh):
+    pass
+
+l = Lokesh()
+l.work()
+Mechanical Engineer
+s = Saran()
+s.work()
+Mechanical Engineer
+#Hybrid Inheritance: (Combination of two or more types of inheritance in a single program)
+class Ancestors:
+    def Great_Grand_Parents(self):
+        print("Ancestors of Our Family")
+
+        
+class Grandparents(Ancestors):
+    def Grand_Parents(self):
+        print("Grandparents")
+
+        
+class Ramesh(Grandparents):
+    def Father(self):
+        print("Ramesh is Father")
+
+        
+class Leela(Grandparents):
+    def mother(self):
+        print("Leela is Mother")
+
+        
+class Saran(Ramesh, Leela):
+    def child(self):
+        print("Saran is Child")
+
+        
+s = Saran()
+s.Great_Grand_Parents()
+Ancestors of Our Family
+s.Grand_Parents()
+Grandparents
+s.Father()
+Ramesh is Father
+s.mother()
+Leela is Mother
+s.child()
+Saran is Child
