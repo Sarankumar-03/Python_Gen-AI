@@ -1,0 +1,60 @@
+#Error in Exception Handling:
+
+try:
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    result = a / b
+    print("Result:", result)
+
+    age = int(input("Enter your age: "))
+
+    if age < 0:
+        print("Error: Enter the correct age.")
+    else:
+        print("Age:", age)
+
+except ValueError:
+    print("Error: Please enter numbers only.")
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+else:
+    print("No exception occurred.")
+
+finally:
+    print("Program ended.")
+
+OUTPUT:
+================== RESTART: C:/Python314/exception_handling.py =================
+Enter first number: 10
+Enter second number: 2
+Result: 5.0
+Enter your age: 20
+Age: 20
+No exception occurred.
+Program ended.
+#ValueError:
+
+================== RESTART: C:/Python314/exception_handling.py =================
+Enter first number: saran
+Error: Please enter numbers only.
+Program ended.
+#ZeroDivisionError:
+
+================== RESTART: C:/Python314/exception_handling.py =================
+Enter first number: 34
+Enter second number: 0
+Error: Cannot divide by zero.
+Program ended.
+#Error in Negative age:
+
+================== RESTART: C:/Python314/exception_handling.py =================
+Enter first number: -23
+Enter second number: 23
+Result: -1.0
+Enter your age: -23
+Error: Enter the correct age.
+No exception occurred.
+Program ended.
